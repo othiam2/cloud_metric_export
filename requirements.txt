@@ -1,0 +1,4 @@
+google-cloud-bigquery==2.9.0
+google-cloud-monitoring==2.0.1
+newlinejson
+PyYAML~=5.4.1

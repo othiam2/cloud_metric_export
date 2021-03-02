@@ -1,0 +1,23 @@
+#project: #project_name
+#dataset: #dataset_name
+#table: #table_name
+
+filters:
+  execution_count:
+    - name: metric.type="cloudfunctions.googleapis.com/function/execution_count"
+    - groupByFields: metric.status
+  send_request_count:
+    - name: metric.type="pubsub.googleapis.com/topic/send_request_count"
+    - groupByFields: resource.topic_id
+  num_undelivered_messages:
+    - name: metric.type="pubsub.googleapis.com/subscription/num_undelivered_messages"
+    - groupByFields: metadata.system_labels.topic_id
+  row_count:
+    - name: metric.type="bigquery.googleapis.com/storage/uploaded_row_count"
+    - groupByFields: resource.dataset_id
+  active_instances:
+    - name: metric.type="cloudfunctions.googleapis.com/function/active_instances"
+    - groupByFields: resource.function_name
+  user_memory_bytes:
+    - name: metric.type="cloudfunctions.googleapis.com/function/user_memory_bytes"
+    - groupByFields:
