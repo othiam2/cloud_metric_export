@@ -1,4 +1,4 @@
-# Data-ingest Metrics
+# Google Cloud Monitoring Metrics Export
 
 ## Purpose
 
